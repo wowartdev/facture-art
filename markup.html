@@ -1,0 +1,97 @@
+Schema.org SEO for FACTURE - page template
+NOTE! eny of itemprop are optional. But the more it will be - the better.
+
+
+------------- WPHeader ----------------
+
+
+<head itemscope itemtype="http://schema.org/WPHeader">
+       <title itemprop="headline"> The page name </title>
+       <meta itemprop="description" name="description" content="the page description">
+       <meta itemprop="keywords" name="keywords" content="the page's main words or tags">
+</head>
+
+
+----------- Search field = SearchAction ----------------
+
+
+<div itemscope itemtype="https://schema.org/WebSite">
+	<meta itemprop="url" content="website url"/>
+	<form itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+		<meta itemprop="target" content="https://website-url/search/?q={query}"/>
+		<input itemprop="query-input" type="text" name="query" required/>
+		<input type="submit"/>
+	</form>
+</div>
+
+
+------------ start Article -------------------
+
+
+<div itemscope itemtype="http://schema.org/Article">
+       <p>Author: <span itemprop="author">The author of this content - Person or Organisation</span></p>
+       <p>Publication date: <time itemprop="datePublished" datetime="2019-04-22">22 June 2021</time></p>
+       <h1 itemprop="headline">The article title</h1>
+       <img itemprop="image" src="the article image url" />
+       <div itemprop="description"> the article description - optional </div>
+       <div itemprop="articleSection"> like Auction, Modern, Lifestyle etc. - optional </div>
+
+
+       <article itemprop="articleBody">
+
+	       <div itemprop="contentLocation"> Place - The location depicted or described in the content. For example, the location in a photograph or painting - optional </div>
+	       <div itemprop="locationCreated"> Place - The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork - optional</div>
+	       <div itemprop="locationCreated"> The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork. - optional</div>
+	       <div itemprop="material"> A material that something is made from, e.g. oil on canvas - optional</div>
+	       <div itemprop="creator"> The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.  - optional</div>
+	       <div itemprop="size"> A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a QuantitativeValue with a unitCode, or a comprehensive and structured SizeSpecification; in other cases, the width, height, depth and weight properties may be more applicable. - optional</div>
+
+       	   The article text
+   	   </article>
+       <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+               <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                      <img itemprop="url image" src="logo url" />
+                </div>
+               <link itemprop="url" href="website url">
+               <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                      <span itemprop="postalCode">post code</span>,
+                      <span itemprop="addressCountry">Country</span>, 
+                      <span itemprop="addressRegion">Region</span>, 
+                      <span itemprop="addressLocality">City</span>, 
+                      <span itemprop="streetAddress">Street address</span>
+               </div>
+               <div>Phone: <a itemprop="telephone" href="tel:+79999999999">+7 (999) 999-99-99</a></div>
+               <meta itemprop="name" content="website name">
+       </div>
+       <meta itemprop="dateModified" content="2019-04-22T11:48:26+00:00">
+       <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage" itemid="The article url"/>
+</div>
+
+------ end Article -------------------------------------
+
+
+
+------------ Organization (can be hidden by css) ------------
+
+
+<div itemscope itemtype="http://schema.org/Organization">
+       <div itemprop="name"> Company name </div>
+       <link itemprop="url" href="website url">
+       <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+              <span itemprop="postalCode">post code</span>,
+              <span itemprop="addressCountry">Country</span>, 
+              <span itemprop="addressRegion">Region</span>, 
+              <span itemprop="addressLocality">City</span>, 
+              <span itemprop="streetAddress">street address</span>
+       </div>
+       <div>Phone: <a itemprop="telephone" href="tel:+79999999999">+7 (999) 999-99-99</a></div>
+       <div>Email: <a itemprop="email" href="mailto:email@email.ru">email@email.com</a></div>
+</div>
+
+
+-------------------------------------------------------------
+
+check microdata https://search.google.com/structured-data/testing-tool
+or the same https://validator.schema.org/
+
+Google Structured Data Markup Helper https://www.google.com/webmasters/markup-helper/u/0/
